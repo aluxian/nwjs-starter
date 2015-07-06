@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1024px" height="1024px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>icon@svg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#00B09E" offset="0%"></stop>
+            <stop stop-color="#009688" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="OS-X-Unofficial" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon" sketch:type="MSArtboardGroup">
+            <rect id="Rectangle-7" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup" x="64" y="64" width="896" height="896" rx="100"></rect>
+            <path d="M815,494.642857 C815,370.064857 679.4075,269 512,269 C344.643,269 209,370.064857 209,494.642857 C209,559.651143 246.09225,618.040571 305.2025,659.165429 C294.0925,685.478857 275.256,719.822857 243.3905,755 C303.8895,755 381.83625,747.733143 441.8555,713.875143 C464.45425,717.948286 487.83575,720.239429 512,720.239429 C679.357,720.239429 815,619.220857 815,494.642857 Z M606.66,634 L671.94,391.24 L619.58,391.24 L579.8,558.52 L579.12,558.52 L537.64,391.24 L487.66,391.24 L445.5,556.48 L444.82,556.48 L406.4,391.24 L353.02,391.24 L417.28,634 L471.34,634 L511.8,468.76 L512.48,468.76 L553.62,634 L606.66,634 Z" id="Shape" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

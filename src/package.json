@@ -1,0 +1,32 @@
+{
+  "main": "app.html",
+  "name": "UnofficialWhatsApp",
+  "version": "1.1.0",
+  "app-id": "com.aluxian.whatsappfordesktop",
+  "chromium-args": "--disable-setuid-sandbox",
+  "window": {
+    "width": 800,
+    "height": 600,
+    "title": "Unofficial WhatsApp",
+    "icon": "icons/icon.png",
+    "toolbar": false,
+    "show": false
+  },
+  "webkit": {
+    "plugin": true
+  },
+  "dependencies": {
+    "async": "^1.0.0",
+    "auto-launch": "^0.1.18",
+    "jfs": "^0.2.5",
+    "request": "^2.56.0",
+    "semver": "^4.3.5"
+  },
+  "manifestUrl": "https://raw.githubusercontent.com/Aluxian/WhatsApp-Desktop/master/src/package.json",
+  "packages": {
+    "osx64": "https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp.dmg",
+    "win32": "https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsAppSetup.exe",
+    "linux32": "https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp_linux32.deb",
+    "linux64": "https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp_linux64.deb"
+  }
+}
