@@ -1,4 +1,9 @@
 #!/bin/bash
+#
+# Use this file to quickly change the app version.
+# It will also tag, commit the change and push it.
+#
+# Usage: ./version.sh 1.2.0
 
 # Check $1
 if [ -z "$1" ]

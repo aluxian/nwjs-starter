@@ -57,7 +57,7 @@ module.exports = {
         settings.launchOnStartup = this.checked;
 
         var launcher = new AutoLaunch({
-          name: 'Unofficial WhatsApp',
+          name: 'Starter',
           isHidden: true // hidden on launch - only works on a mac atm
         });
 
@@ -130,50 +130,6 @@ module.exports = {
   },
 
   /**
-   * Create the themes submenu shown in the main one.
-   *
-   * @param keep If true, then the menu will only be created once and it
-   *             should listen for changes in the settings to update itself.
-   */
-  createThemesMenu: function(keep) {
-    var menu = new gui.Menu();
-    var THEMES = {
-      'default': 'Default',
-      'mosaic': 'Mosaic',
-      'dark': 'Dark'
-    };
-
-    Object.keys(THEMES).forEach(function(key) {
-      menu.append(new gui.MenuItem({
-        type: 'checkbox',
-        label: THEMES[key],
-        checked: settings.theme == key,
-        click: function() {
-          if (keep) {
-            menu.items.forEach(function(item) {
-              item.checked = false;
-            });
-
-            this.checked = true;
-          }
-
-          settings.theme = key;
-        }
-      }));
-    });
-
-    if (keep) {
-      settings.watch('theme', function(key) {
-        menu.items.forEach(function(item) {
-          item.checked = item.label == THEMES[key];
-        });
-      });
-    }
-
-    return menu;
-  },
-
-  /**
    * Create the menu bar for the given window, only on OS X.
    */
   loadMenuBar: function(win) {
@@ -185,7 +141,7 @@ module.exports = {
       type: 'menubar'
     });
 
-    menu.createMacBuiltin('Unofficial WhatsApp');
+    menu.createMacBuiltin('Starter');
     var submenu = menu.items[0].submenu;
 
     submenu.insert(new gui.MenuItem({
@@ -225,14 +181,14 @@ module.exports = {
     }));
 
     menu.append(new gui.MenuItem({
-      label: 'Show Unofficial WhatsApp',
+      label: 'Show Starter',
       click: function() {
         win.show();
       }
     }));
 
     menu.append(new gui.MenuItem({
-      label: 'Quit Unofficial WhatsApp',
+      label: 'Quit Starter',
       click: function() {
         win.close(true);
       }
@@ -267,7 +223,7 @@ module.exports = {
       win.show();
     });
 
-    tray.tooltip = 'Unofficial WhatsApp for Desktop';
+    tray.tooltip = 'Starter';
     tray.menu = this.createTrayMenu(win);
 
     // keep the object in memory

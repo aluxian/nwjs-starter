@@ -1,23 +1,23 @@
 !include "MUI2.nsh"
 
-Name "Unofficial WhatsApp"
+Name "Starter"
 BrandingText "aluxian.com"
 
 # set the icon
 !define MUI_ICON "icon.ico"
 
 # define the resulting installer's name:
-OutFile "..\dist\UnofficialWhatsAppSetup.exe"
+OutFile "..\dist\StarterSetup.exe"
 
 # set the installation directory
-InstallDir "$PROGRAMFILES\Unofficial WhatsApp for Desktop\"
+InstallDir "$PROGRAMFILES\Starter\"
 
 # app dialogs
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_INSTFILES
 
-!define MUI_FINISHPAGE_RUN_TEXT "Start Unofficial WhatsApp"
-!define MUI_FINISHPAGE_RUN "$INSTDIR\UnofficialWhatsApp.exe"
+!define MUI_FINISHPAGE_RUN_TEXT "Start Starter"
+!define MUI_FINISHPAGE_RUN "$INSTDIR\Starter.exe"
 
 !insertmacro MUI_PAGE_FINISH
 !insertmacro MUI_LANGUAGE "English"
@@ -32,15 +32,15 @@ Section
   SetOutPath $INSTDIR
 
   # specify the files to go in the output path
-  File /r ..\build\UnofficialWhatsApp\win32\*
+  File /r ..\build\Starter\win32\*
 
   # create the uninstaller
-  WriteUninstaller "$INSTDIR\Uninstall Unofficial WhatsApp for Desktop.exe"
+  WriteUninstaller "$INSTDIR\Uninstall Starter.exe"
 
   # create shortcuts in the start menu and on the desktop
-  CreateShortCut "$SMPROGRAMS\Unofficial WhatsApp.lnk" "$INSTDIR\UnofficialWhatsApp.exe"
-  CreateShortCut "$SMPROGRAMS\Uninstall Unofficial WhatsApp for Desktop.lnk" "$INSTDIR\Uninstall Unofficial WhatsApp for Desktop.exe"
-  CreateShortCut "$DESKTOP\Unofficial WhatsApp.lnk" "$INSTDIR\UnofficialWhatsApp.exe"
+  CreateShortCut "$SMPROGRAMS\Starter.lnk" "$INSTDIR\Starter.exe"
+  CreateShortCut "$SMPROGRAMS\Uninstall Starter.lnk" "$INSTDIR\Uninstall Starter.exe"
+  CreateShortCut "$DESKTOP\Starter.lnk" "$INSTDIR\Starter.exe"
 
 SectionEnd
 
@@ -51,8 +51,8 @@ Section "Uninstall"
   RMDir /r $INSTDIR
 
   # delete the shortcuts
-  Delete "$SMPROGRAMS\Unofficial WhatsApp.lnk"
-  Delete "$SMPROGRAMS\Uninstall Unofficial WhatsApp for Desktop.lnk"
-  Delete "$DESKTOP\Unofficial WhatsApp.lnk"
+  Delete "$SMPROGRAMS\Starter.lnk"
+  Delete "$SMPROGRAMS\Uninstall Starter.lnk"
+  Delete "$DESKTOP\Starter.lnk"
 
 SectionEnd

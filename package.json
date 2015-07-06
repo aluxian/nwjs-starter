@@ -1,10 +1,10 @@
 {
   "name": "starter",
   "version": "0.1.0",
-  "description": "A simple & beautiful desktop client for WhatsApp. Not an official app.",
+  "description": "NW.js starter project powered by Gulp.",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Aluxian/WhatsApp-Desktop.git"
+    "url": "git@github.com:Aluxian/nwjs-starter.git"
   },
   "scripts": {
     "postinstall": "(cd src && npm install)"

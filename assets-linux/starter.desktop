@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Starter
+Icon=starter
+Exec=/opt/starter/starter
+Comment=Starter
+Categories=GNOME;GTK;Development;Documentation;
+Terminal=false

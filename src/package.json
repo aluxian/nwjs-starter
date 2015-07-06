@@ -1,13 +1,13 @@
 {
   "main": "app.html",
-  "name": "UnofficialWhatsApp",
-  "version": "1.1.0",
-  "app-id": "com.aluxian.whatsappfordesktop",
+  "name": "Starter",
+  "version": "0.1.0",
+  "app-id": "com.aluxian.starter",
   "chromium-args": "--disable-setuid-sandbox",
   "window": {
     "width": 800,
     "height": 600,
-    "title": "Unofficial WhatsApp",
+    "title": "Starter",
     "icon": "icons/icon.png",
     "toolbar": false,
     "show": false
@@ -22,11 +22,11 @@
     "request": "^2.56.0",
     "semver": "^4.3.5"
   },
-  "manifestUrl": "https://raw.githubusercontent.com/Aluxian/WhatsApp-Desktop/master/src/package.json",
+  "manifestUrl": "https://raw.githubusercontent.com/Aluxian/nwjs-starter/master/src/package.json",
   "packages": {
-    "osx64": "https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp.dmg",
-    "win32": "https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsAppSetup.exe",
-    "linux32": "https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp_linux32.deb",
-    "linux64": "https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v1.1.0/UnofficialWhatsApp_linux64.deb"
+    "osx64": "https://github.com/Aluxian/nwjs-starter/releases/download/v0.1.0/Starter.dmg",
+    "win32": "https://github.com/Aluxian/nwjs-starter/releases/download/v0.1.0/StarterSetup.exe",
+    "linux32": "https://github.com/Aluxian/nwjs-starter/releases/download/v0.1.0/Starter_linux32.deb",
+    "linux64": "https://github.com/Aluxian/nwjs-starter/releases/download/v0.1.0/Starter_linux64.deb"
   }
 }

@@ -28,19 +28,6 @@ module.exports = {
   },
 
   /**
-   * Close the window using the ESC key.
-   */
-  closeWithEscKey: function(win, doc) {
-    doc.onkeyup = function(e) {
-      if (e.keyCode == 27) {
-        e.preventDefault();
-        win.close();
-        return false;
-      }
-    }
-  },
-
-  /**
    * Change the new window policy to open links in the browser or another window.
    */
   setNewWinPolicy: function(win) {
@@ -78,45 +65,6 @@ module.exports = {
     win.on('restore', function() {
       win.sizeMode = 'normal';
     });
-  },
-
-  /**
-   * Bind the events of the node window to the content window.
-   */
-  bindEvents: function(win, contentWindow) {
-    ['focus', 'blur'].forEach(function(name) {
-      win.removeAllListeners(name);
-      win.on(name, function() {
-        if (contentWindow.dispatchEvent && contentWindow.Event) {
-          contentWindow.dispatchEvent(new contentWindow.Event(name));
-        }
-      });
-    });
-  },
-
-  /**
-   * Set an interval to sync the badge and the title.
-   */
-  syncBadgeAndTitle: function(win, parentDoc, childDoc) {
-    var notifCountRegex = /\((\d)\)/;
-
-    setInterval(function() {
-      // Sync title
-      parentDoc.title = childDoc.title;
-
-      // Find count
-      var countMatch = notifCountRegex.exec(childDoc.title);
-      var label = countMatch && countMatch[1] || '';
-      win.setBadgeLabel(label);
-
-      // Update the tray icon too
-      if (win.tray) {
-        var type = platform.isOSX ? 'menubar' : 'tray';
-        var alert = label ? '_alert' : '';
-        var extension = platform.isOSX ? '.tiff' : '.png';
-        win.tray.icon = 'images/icon_' + type + alert + extension;
-      }
-    }, 100);
   },
 
   /**

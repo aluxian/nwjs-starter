@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=Unofficial WhatsApp
-Icon=whatsappfordesktop
-Exec=/opt/WhatsAppForDesktop/UnofficialWhatsApp
-Comment=Unofficial WhatsApp for Desktop
-Categories=Network;Chat;
-Terminal=false

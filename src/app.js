@@ -6,12 +6,11 @@ var updater = require('./components/updater');
 var menus = require('./components/menus');
 var settings = require('./components/settings');
 var windowBehaviour = require('./components/window-behaviour');
-var notification = require('./components/notification');
 var dispatcher = require('./components/dispatcher');
 
 // Ensure there's an app shortcut for toast notifications to work on Windows
 if (platform.isWindows) {
-  gui.App.createShortcut(process.env.APPDATA + "\\Microsoft\\Windows\\Start Menu\\Programs\\Unofficial WhatsApp.lnk");
+  gui.App.createShortcut(process.env.APPDATA + "\\Microsoft\\Windows\\Start Menu\\Programs\\Starter.lnk");
 }
 
 // Add dispatcher events
@@ -48,24 +47,8 @@ if (platform.isWindows) {
 windowBehaviour.set(win);
 windowBehaviour.setNewWinPolicy(win);
 
-// Inject logic into the app when it's loaded
-var iframe = document.querySelector('iframe');
-iframe.onload = function() {
-  // Inject a callback in the notification API
-  notification.inject(iframe.contentWindow, win);
-
-  // Add a context menu
-  menus.injectContextMenu(win, iframe.contentWindow, iframe.contentDocument);
-
-  // Bind native events to the content window
-  windowBehaviour.bindEvents(win, iframe.contentWindow);
-
-  // Watch the iframe periodically to sync the badge and the title
-  windowBehaviour.syncBadgeAndTitle(win, document, iframe.contentDocument);
-
-  // Listen for ESC key press
-  windowBehaviour.closeWithEscKey(win, iframe.contentDocument);
-};
+// Add a context menu
+menus.injectContextMenu(win, window, document);
 
 // Reload the app periodically until it loads
 var reloadIntervalId = setInterval(function() {
