@@ -6,18 +6,26 @@ This is a sample project to get you up and running with [NW.js](http://nwjs.io/)
 
 ## Features
 
-* Native notifications
-* Auto update
-* Use Gulp to build, sign, pack and upload the app
-* Remembers window position when closed
-* Customizable settings in the right-click menu
-  * Run as menu bar app
-  * Launch on OS startup
-  * Open links in the browser
+* native notifications
+* auto update
+* gulp tasks to
+  * build each release
+  * sign the OS X app
+  * pack
+    * Windows: nsis installer
+    * OSX: dmg
+    * Linux: deb package
+  * upload to GitHub
+* remembers window position when closed
+* customizable settings in the right-click menu
+  * run as menu bar app
+  * launch on OS startup
+  * open links in the browser
 
 What doesn't work:
 
-* Tray icon on linux
+* tray icon on linux
+* rpm builds
 
 ## Pre-requisites
 
@@ -53,11 +61,18 @@ Quickly install this on OS X:
 
 The output is in `./dist`. Take a look at `gulpfile.coffee` for additional tasks.
 
-**TIP**: use the `--toolbar` parameter to quickly build the app with the toolbar on. E.g. `gulp build:win32 --toolbar`.
+## Tips
 
-**TIP**: use `gulp build:win32 --noicon` to quickly build the Windows app without the icon, which normally takes some seconds.
+Use the `--toolbar` parameter to quickly build the app with the toolbar on. E.g. `gulp build:win32 --toolbar`.
 
-**TIP**: for OS X, use the `run:osx64` task to build the app and run it immediately.
+Use `gulp build:win32 --noicon` to quickly build the Windows app without the icon, which normally takes some seconds.
+
+For OS X, use the `run:osx64` task to build the app and run it immediately.
+
+Use these to create the .tiff images for the OS X menu bar:
+
+    $ tiffutil -cathidpicheck icon_menubar.png icon_menubar@2x.png -out icon_menubar.tiff
+    $ tiffutil -cathidpicheck icon_menubar_alert.png icon_menubar_alert@2x.png -out icon_menubar_alert.tiff
 
 ## Contributions
 
