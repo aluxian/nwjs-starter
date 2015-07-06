@@ -1,5 +1,7 @@
 # NW.js starter
 
+[![Join the chat at https://gitter.im/Aluxian/nwjs-starter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Aluxian/nwjs-starter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This is a sample project to get you up and running with [NW.js](http://nwjs.io/). Here's a screenshot from one of my apps that I created with this kit:
 
 ![Cross-platform screenshot](screenshot.png)
