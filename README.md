@@ -1,8 +1,10 @@
-# NW.js starter
+# NW.js Starter
 
-This is a sample project to get you up and running with [NW.js](http://nwjs.io/). Here's a screenshot from one of my apps that I created with this kit:
+This is a sample project to get you up and running with [NW.js](http://nwjs.io/).
 
-![Cross-platform screenshot](screenshot.png)
+If you need help, read my tutorial [here](http://blog.aluxian.com/how-to-create-a-cross-platform-desktop-app-with-nw-js/). This is a screenshot of the app that the tutorial guides you through:
+
+![Cross-platform screenshot](screenshot.jpg)
 
 ## Features
 
@@ -26,6 +28,9 @@ What doesn't work:
 
 * tray icon on linux
 * rpm builds
+
+Not done yet:
+* Windows binary signing
 
 ## Pre-requisites
 
