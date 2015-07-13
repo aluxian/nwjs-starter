@@ -78,13 +78,13 @@ gulp.task 'pack:win32', ['build:win32'], ->
         .on 'end', ->
           shelljs.cd './build/linux'
 
-          port = if arch == 32 then 'i386' else 'amd64'
+          port = if arch == 32 then 'i386' else 'x86_64'
           output = "../../dist/Starter_linux#{arch}.#{target}"
 
           shelljs.mkdir '-p', '../../dist' # it fails if the dir doesn't exist
           shelljs.rm '-f', output          # it fails if the package already exists
 
-          shelljs.exec "fpm -s dir -t #{target} -a #{port} -n starter --after-install ./opt/starter/after-install.sh --after-remove ./opt/starter/after-remove.sh --license MIT --category Chat --url \"https://example.com\" --description \"A sample NW.js app.\" -m \"Alexandru Rosianu <me@aluxian.com>\" -p #{output} -v #{manifest.version} ."
+          shelljs.exec "fpm -s dir -t #{target} -a #{port} --rpm-os linux -n starter --after-install ./opt/starter/after-install.sh --after-remove ./opt/starter/after-remove.sh --license MIT --category Chat --url \"https://example.com\" --description \"A sample NW.js app.\" -m \"Alexandru Rosianu <me@aluxian.com>\" -p #{output} -v #{manifest.version} ."
           shelljs.cd '../..'
 
 # Make packages for all platforms
