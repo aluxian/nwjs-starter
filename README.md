@@ -5,7 +5,7 @@
 
 This is a sample project to get you up and running with [NW.js](http://nwjs.io/).
 
-If you need help, read my tutorial [here](http://blog.aluxian.com/how-to-create-a-cross-platform-desktop-app-with-nw-js/). This is a screenshot of the app that the tutorial guides you through, Klout:
+If you need help, read my tutorial [here](http://blog.aluxian.com/how-to-create-cross-platform-desktop-apps-with-nw-js/). This is a screenshot of the app that the tutorial guides you through, Klout:
 
 ![Cross-platform screenshot](screenshot.jpg)
 
