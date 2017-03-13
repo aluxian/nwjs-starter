@@ -1,3 +1,5 @@
+require('object.observe');
+
 var Store = require('jfs');
 var path = require('path');
 var gui = window.require('nw.gui');

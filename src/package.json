@@ -16,17 +16,18 @@
     "plugin": true
   },
   "dependencies": {
-    "async": "^1.0.0",
-    "auto-launch": "^0.1.18",
-    "jfs": "^0.2.5",
-    "request": "^2.56.0",
-    "semver": "^4.3.5"
+    "async": "^2.1.5",
+    "auto-launch": "^5.0.1",
+    "jfs": "^0.2.6",
+    "object.observe": "^0.2.6",
+    "request": "^2.81.0",
+    "semver": "^5.3.0"
   },
-  "manifestUrl": "https://raw.githubusercontent.com/Aluxian/nwjs-starter/master/src/package.json",
+  "manifestUrl": "https://raw.githubusercontent.com/lucasferreira/nwjs-starter/master/src/package.json",
   "packages": {
-    "osx64": "https://github.com/Aluxian/nwjs-starter/releases/download/v0.1.0/Starter.dmg",
-    "win32": "https://github.com/Aluxian/nwjs-starter/releases/download/v0.1.0/StarterSetup.exe",
-    "linux32": "https://github.com/Aluxian/nwjs-starter/releases/download/v0.1.0/Starter_linux32.deb",
-    "linux64": "https://github.com/Aluxian/nwjs-starter/releases/download/v0.1.0/Starter_linux64.deb"
+    "osx64": "https://github.com/lucasferreira/nwjs-starter/releases/download/v0.1.0/Starter.dmg",
+    "win32": "https://github.com/lucasferreira/nwjs-starter/releases/download/v0.1.0/StarterSetup.exe",
+    "linux32": "https://github.com/lucasferreira/nwjs-starter/releases/download/v0.1.0/Starter_linux32.deb",
+    "linux64": "https://github.com/lucasferreira/nwjs-starter/releases/download/v0.1.0/Starter_linux64.deb"
   }
 }
