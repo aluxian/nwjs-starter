@@ -17,9 +17,9 @@ gulp.task 'clean', ->
       shelljs.sed '-i', '"toolbar": false', '"toolbar": true', './src/package.json'
 
     gulp.src './src/**'
-      .pipe $.nodeWebkitBuilder
+      .pipe $.nwBuilder
         platforms: [platform]
-        version: '0.12.2'
+        version: '0.13.4'
         winIco: if process.argv.indexOf('--noicon') > 0 then undefined else './assets-windows/icon.ico'
         macIcns: './assets-osx/icon.icns'
         macZip: true
